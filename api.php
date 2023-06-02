@@ -17,11 +17,11 @@ class Calculadora
                 }
 
                 $num1 = floatval($partes[0]);//con floatval obtenemos el valor float de los valores en las posiciones deseada del array
-                $num2 = floatval($partes[1]);
+                $num2 = floatval($partes[1]);//cada vez que agregamos un operador, los valores de los nums cambian, num1 seria la operacion ya resuelta y num2 el nuevo numero
 
                 switch ($operador) {
                     case '+':
-                        $resultado = ($resultado === null) ? $num1 + $num2 : $resultado + $num2;
+                        $resultado = ($resultado === null) ? $num1 + $num2 : $resultado + $num2;//el operador ternario nos dice que si resultado es nulo , el resultado seria la resolucion de la operacion,pero si esta lleno seria el resultado anterior mas el nuevo
                         break;
                     case '-':
                         $resultado = ($resultado === null) ? $num1 - $num2 : $resultado - $num2;
